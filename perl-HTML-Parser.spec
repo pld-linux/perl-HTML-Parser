@@ -5,9 +5,9 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	HTML
 %define		pnam	Parser
-Summary:	HTML::Parser module - parsing and extracting information from HTML documents
-Summary(cs):	Modul pro parsovАnМ HTML v Perlu
-Summary(pl):	ModuЁ HTML::Parser - analiza i wyci╠ganie informacji z dokumentСw HTML
+Summary:	HTML::Parser - parsing and extracting information from HTML documents
+Summary(cs):	HTML::Parser - modul pro parsovАnМ HTML v Perlu
+Summary(pl):	HTML::Parser - analiza i wyci╠ganie informacji z dokumentСw HTML
 Summary(ru):	HTML::Parser - набор модулей для "разбора" HTML-документов
 Summary(uk):	HTML::Parser - наб╕р модул╕в для розбору HTML-документ╕в
 Summary(zh_CN):	Perl ╣д HTML ╫БнЖфВдё©И║ё
