@@ -19,14 +19,14 @@ Summary(uk):	HTML::Parser - ÎÁÂ¦Ò ÍÏÄÕÌ¦× ÄÌÑ ÒÏÚÂÏÒÕ HTML-ÄÏËÕÍÅÎÔ¦×
 Summary(zh_CN):	Perl µÄ HTML ½âÎöÆ÷Ä£¿é¡£
 Name:		perl-HTML-Parser
 Version:	3.27
-Release:	1
+Release:	2
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildConflicts:	perl-HTML-Stream = 1.45-3
 BuildRequires:	perl-HTML-Tagset
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # HTTP::Headers (perl-libwww) is not always required
@@ -94,7 +94,8 @@ från HTML-dokument.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %install
@@ -107,10 +108,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%dir %{perl_sitearch}/HTML
-%{perl_sitearch}/HTML/*.pm
-%dir %{perl_sitearch}/auto/HTML
-%dir %{perl_sitearch}/auto/HTML/Parser
-%{perl_sitearch}/auto/HTML/Parser/Parser.bs
-%attr(755,root,root) %{perl_sitearch}/auto/HTML/Parser/Parser.so
+%dir %{perl_vendorarch}/HTML
+%{perl_vendorarch}/HTML/*.pm
+%dir %{perl_vendorarch}/auto/HTML
+%dir %{perl_vendorarch}/auto/HTML/Parser
+%{perl_vendorarch}/auto/HTML/Parser/Parser.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/HTML/Parser/Parser.so
 %{_mandir}/man3/*
