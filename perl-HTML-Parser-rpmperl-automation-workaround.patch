@@ -1,0 +1,13 @@
+diff -urN HTML-Parser-3.15.orig/lib/HTML/HeadParser.pm HTML-Parser-3.15/lib/HTML/HeadParser.pm
+--- HTML-Parser-3.15.orig/lib/HTML/HeadParser.pm	Sun Feb 11 18:16:46 2001
++++ HTML-Parser-3.15/lib/HTML/HeadParser.pm	Sun Feb 11 18:17:16 2001
+@@ -89,8 +89,7 @@
+ sub new
+ {
+     my($class, $header) = @_;
+-    unless ($header) {
+-	require HTTP::Headers;
++    unless ($header) {require HTTP::Headers;
+ 	$header = HTTP::Headers->new;
+     }
+ 
