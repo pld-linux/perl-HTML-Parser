@@ -11,6 +11,7 @@ Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/HTML-Parser-%{version}.ta
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.005_03-14
 BuildRequires:	perl-libwww
+BuildConflicts:	perl-HTML-Stream = 1.45-3
 %requires_eq	perl
 Requires:	%{perl_sitearch}
 BuildRoot:	/tmp/%{name}-%{version}-root
