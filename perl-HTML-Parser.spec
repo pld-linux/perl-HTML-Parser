@@ -4,7 +4,7 @@ Summary(pl):	Modu³ Perla HTML-Parser
 Name:		perl-HTML-Parser
 Version:	3.25
 Release:	2
-LIcense:	Distributable
+License:	distributable
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
