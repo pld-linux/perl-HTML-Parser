@@ -23,6 +23,7 @@ Release:	3
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5: f4c935195f93fdf5d8625a05011136e5
 BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	perl-HTML-Tagset
 BuildRequires:	rpm-perlprov >= 4.1-13
