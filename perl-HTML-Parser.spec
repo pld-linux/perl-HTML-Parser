@@ -18,14 +18,14 @@ Summary(sv):	HTML::Parser-modul till Perl
 Summary(uk):	HTML::Parser - ÎÁÂ¦Ò ÍÏÄÕÌ¦× ÄÌÑ ÒÏÚÂÏÒÕ HTML-ÄÏËÕÍÅÎÔ¦×
 Summary(zh_CN):	Perl µÄ HTML ½âÎöÆ÷Ä£¿é¡£
 Name:		perl-HTML-Parser
-Version:	3.28
+Version:	3.31
 Release:	1
 License:	distributable
 Group:		Development/Languages/Perl
-# Source0-md5:	c904aa58c6ba2d35ffcb635935467cef
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-BuildRequires:	perl-devel >= 5.8.0
+# Source0-md5:	143e38e18c6166fb1c8950a037139454
 BuildRequires:	perl-HTML-Tagset
+BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildConflicts:	perl-HTML-Stream = 1.45-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
