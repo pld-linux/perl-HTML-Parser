@@ -3,7 +3,7 @@ Summary:	Perl HTML-Parser module
 Summary(pl):	Modu³ Perla HTML-Parser
 Name:		perl-HTML-Parser
 Version:	3.25
-Release:	1
+Release:	2
 LIcense:	Distributable
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -41,7 +41,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%dir %{perl_sitearch}/HTML
 %{perl_sitearch}/HTML/*.pm
+%dir %{perl_sitearch}/auto/HTML
 %dir %{perl_sitearch}/auto/HTML/Parser
 %{perl_sitearch}/auto/HTML/Parser/Parser.bs
 %attr(755,root,root) %{perl_sitearch}/auto/HTML/Parser/Parser.so
