@@ -22,12 +22,12 @@ Summary(sv):	HTML::Parser-modul till Perl
 Summary(uk):	HTML::Parser - ÎÁÂ¦Ò ÍÏÄÕÌ¦× ÄÌÑ ÒÏÚÂÏÒÕ HTML-ÄÏËÕÍÅÎÔ¦×
 Summary(zh_CN):	Perl µÄ HTML ½âÎöÆ÷Ä£¿é¡£
 Name:		perl-HTML-Parser
-Version:	3.33
+Version:	3.34
 Release:	1
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	088285128121d4c09da4e2c87953f9f3
+# Source0-md5:	3a835024acce73f3b6133c2e4762f6f9
 BuildRequires:	perl-HTML-Tagset
 BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
