@@ -106,7 +106,7 @@ från HTML-dokument.
 %{__make} \
 	OPTIMIZE="%{rpmcflags}"
 
-%{?with_tests:make test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
