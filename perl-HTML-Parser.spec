@@ -3,7 +3,7 @@ Summary:	Perl HTML-Parser module
 Summary(pl):	Modu³ Perla HTML-Parser
 Name:		perl-HTML-Parser
 Version:	3.21
-Release:	1
+Release:	2
 LIcense:	Distributable
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
