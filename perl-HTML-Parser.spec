@@ -1,27 +1,32 @@
-%define		perl_sitelib   %(eval "`perl -V:installsitelib`"; echo $installsitelib)
-
+%include	/usr/lib/rpm/macros.perl
+%define		__find_requires %{_builddir}/HTML-Parser-%{version}/find-perl-requires
 Summary:	Perl HTML-Parser module
 Summary(pl):	Modu³ Perla HTML-Parser
 Name:		perl-HTML-Parser
 Version:	2.23
-Release:	3
+Release:	4
 Copyright:	distributable
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/HTML-Parser-%{version}.tar.gz
-BuildRequires:	perl >= 5.005_03-10
+Patch:		perl-HTML-Parser-dep.patch
+BuildRequires:	rpm-perlprov
+BuildRequires:	perl >= 5.005_03-12
 %requires_eq	perl
 Requires:	%{perl_sitearch}
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
-Perl HTML-Parser module
+Perl HTML-Parser module.
 
 %description -l pl
 Modu³ perla pozwalaj±cy analizowaæ pliki HTML.
 
 %prep
 %setup -q -n HTML-Parser-%{version}
+%patch -p1
+
+chmod +x find-perl-requires
 
 %build
 perl Makefile.PL
@@ -29,10 +34,8 @@ make OPTIMIZE="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/%{perl_archlib}
 
-make install \
-	DESTDIR=$RPM_BUILD_ROOT
+make install DESTDIR=$RPM_BUILD_ROOT
 
 (
   cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/HTML/Parser/
