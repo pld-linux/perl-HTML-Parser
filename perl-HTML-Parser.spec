@@ -3,8 +3,8 @@
 %bcond_without	tests	# Do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	HTML
-%define	pnam	Parser
+%define		pdir	HTML
+%define		pnam	Parser
 Summary:	HTML::Parser - parsing and extracting information from HTML documents
 Summary(cs):	HTML::Parser - modul pro parsování HTML v Perlu
 Summary(pl):	HTML::Parser - analiza i wyci±ganie informacji z dokumentów HTML
