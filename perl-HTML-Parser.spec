@@ -4,7 +4,7 @@ Summary:	Perl HTML-Parser module
 Summary(pl):	Modu³ Perla HTML-Parser
 Name:		perl-HTML-Parser
 Version:	2.23
-Release:	2
+Release:	3
 Copyright:	distributable
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
@@ -47,8 +47,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{perl_sitelib}/HTML
+%{perl_sitelib}/HTML/*.pm
 
-%{perl_sitearch}/auto/HTML
+%{perl_sitearch}/auto/HTML/Parser
 
 %{_mandir}/man3/*
