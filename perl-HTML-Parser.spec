@@ -1,9 +1,12 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Perl HTML::Parser module
 Summary(pl):	ModuЁ Perla HTML::Parser
+Summary(pt_BR):	MСdulo Perl HTML::Parser
+Summary(ru): HTML::Parser - набор модулей для "разбора" HTML-документов.
+Summary(uk): HTML::Parser - наб╕р модул╕в для розбору HTML-документ╕в
 Name:		perl-HTML-Parser
 Version:	3.26
-Release:	1
+Release:	12
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/HTML//HTML-Parser-%{version}.tar.gz
@@ -17,10 +20,22 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_noautoreq	"perl(HTTP::Headers)"
 
 %description
-Perl HTML::Parser module.
+Perl module HTML::Parser that alloe parse and extract information from
+HTML documents.
 
 %description -l pl
-ModuЁ perla pozwalaj╠cy analizowaФ pliki HTML.
+ModuЁ Perla HTML::Parser pozwalaj╠cy na parsowanie i wyciaganie
+informacji z dokumentu HTML.
+
+%description -l pt_BR
+MСdulo Perl HTML::Parser - Uma coleГЦo de mСdulos para examinar e
+extrair informaГУes de documentos HTML.
+
+%description -l ru
+HTML::Parser - набор модулей для "разбора" HTML-документов.
+
+%description -l uk
+HTML::Parser - наб╕р модул╕в для розбору HTML-документ╕в.
 
 %prep
 %setup -q -n HTML-Parser-%{version}
