@@ -1,3 +1,7 @@
+
+# Conditional build:
+%bcond_without	tests	# Do not perform "make test"
+
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	HTML
 %define		pnam	Parser
@@ -18,12 +22,12 @@ Summary(sv):	HTML::Parser-modul till Perl
 Summary(uk):	HTML::Parser - ÎÁÂ¦Ò ÍÏÄÕÌ¦× ÄÌÑ ÒÏÚÂÏÒÕ HTML-ÄÏËÕÍÅÎÔ¦×
 Summary(zh_CN):	Perl µÄ HTML ½âÎöÆ÷Ä£¿é¡£
 Name:		perl-HTML-Parser
-Version:	3.32
+Version:	3.33
 Release:	1
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	f68df7ba0fccfd34a8a188e4734b99e1
+# Source0-md5:	088285128121d4c09da4e2c87953f9f3
 BuildRequires:	perl-HTML-Tagset
 BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -101,6 +105,8 @@ från HTML-dokument.
 	< /dev/null
 %{__make} \
 	OPTIMIZE="%{rpmcflags}"
+
+%{?with_tests:make test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
