@@ -7,10 +7,10 @@ Release:	1
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/HTML//HTML-Parser-%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
-BuildRequires:	perl-HTML-Tagset
 BuildConflicts:	perl-HTML-Stream = 1.45-3
+BuildRequires:	perl-HTML-Tagset
+BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # HTTP::Headers (perl-libwww) is not always required
