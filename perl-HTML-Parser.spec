@@ -14,10 +14,10 @@ Requires:	%{perl_sitearch}
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
-Provides access to the md5 algorithm from RSA.
+Perl HTML-Parser module
 
 %description -l pl
-Modu³ perla wspomagaj±cy algorytm md5.
+Modu³ perla pozwalaj±cy analizowaæ pliki HTML.
 
 %prep
 %setup -q -n HTML-Parser-%{version}
