@@ -12,12 +12,12 @@ Summary(ru):	HTML::Parser - набор модулей для "разбора" HTML-документов
 Summary(uk):	HTML::Parser - наб╕р модул╕в для розбору HTML-документ╕в
 Summary(zh_CN):	Perl ╣д HTML ╫БнЖфВдё©И║ё
 Name:		perl-HTML-Parser
-Version:	3.34
+Version:	3.35
 Release:	1
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	3a835024acce73f3b6133c2e4762f6f9
+# Source0-md5:	674da96a8f291ae47432a363e3099d3b
 BuildRequires:	perl-HTML-Tagset >= 3
 BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
