@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
-Summary:	Perl HTML-Parser module
-Summary(pl):	Modu³ Perla HTML-Parser
+Summary:	Perl HTML::Parser module
+Summary(pl):	Modu³ Perla HTML::Parser
 Name:		perl-HTML-Parser
 Version:	3.25
 Release:	3
@@ -17,7 +17,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_noautoreq	"perl(HTTP::Headers)"
 
 %description
-Perl HTML-Parser module.
+Perl HTML::Parser module.
 
 %description -l pl
 Modu³ perla pozwalaj±cy analizowaæ pliki HTML.
