@@ -1,0 +1,3 @@
+perl-HTML-Parser:
+- added woraround for rpm automation (some modules are NOT required for using
+	this module!!!)
