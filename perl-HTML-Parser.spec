@@ -1,24 +1,14 @@
-
+#
 # Conditional build:
 %bcond_without	tests	# Do not perform "make test"
-
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	HTML
 %define		pnam	Parser
-Summary:	Perl HTML::Parser module
+Summary:	HTML::Parser module - parsing and extracting information from HTML documents
 Summary(cs):	Modul pro parsování HTML v Perlu
-Summary(da):	HTML::Parser modul til Perl
-Summary(de):	HTML::Parser Modul für Perl
-Summary(es):	Módulo HTML::Parser para Perl
-Summary(fr):	Module HTML::Parser pour Perl
-Summary(it):	Modulo HTML::Parser per Perl
-Summary(ja):	Perl ÍÑ HTML::Parser
-Summary(ko):	ÆÞÀ» À§ÇÑ HTML::Parser ¸ðÁÙ
-Summary(pl):	Modu³ Perla HTML::Parser
-Summary(pt):	O módulo HTML::Parser para o Perl
-Summary(pt_BR):	Módulo Perl HTML::Parser
+Summary(pl):	Modu³ HTML::Parser - analiza i wyci±ganie informacji z dokumentów HTML
 Summary(ru):	HTML::Parser - ÎÁÂÏÒ ÍÏÄÕÌÅÊ ÄÌÑ "ÒÁÚÂÏÒÁ" HTML-ÄÏËÕÍÅÎÔÏ×
-Summary(sv):	HTML::Parser-modul till Perl
 Summary(uk):	HTML::Parser - ÎÁÂ¦Ò ÍÏÄÕÌ¦× ÄÌÑ ÒÏÚÂÏÒÕ HTML-ÄÏËÕÍÅÎÔ¦×
 Summary(zh_CN):	Perl µÄ HTML ½âÎöÆ÷Ä£¿é¡£
 Name:		perl-HTML-Parser
@@ -28,7 +18,7 @@ License:	distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	3a835024acce73f3b6133c2e4762f6f9
-BuildRequires:	perl-HTML-Tagset
+BuildRequires:	perl-HTML-Tagset >= 3
 BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildConflicts:	perl-HTML-Stream = 1.45-3
@@ -119,6 +109,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc Changes README TODO
 %dir %{perl_vendorarch}/HTML
 %{perl_vendorarch}/HTML/*.pm
 %dir %{perl_vendorarch}/auto/HTML
