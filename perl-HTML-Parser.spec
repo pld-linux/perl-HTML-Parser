@@ -18,8 +18,8 @@ Summary(sv):	HTML::Parser-modul till Perl
 Summary(uk):	HTML::Parser - наб╕р модул╕в для розбору HTML-документ╕в
 Summary(zh_CN):	Perl ╣д HTML ╫БнЖфВдё©И║ё
 Name:		perl-HTML-Parser
-Version:	3.27
-Release:	3
+Version:	3.28
+Release:	1
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
