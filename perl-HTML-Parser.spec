@@ -22,7 +22,7 @@ Version:	3.27
 Release:	1
 License:	distributable
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildConflicts:	perl-HTML-Stream = 1.45-3
 BuildRequires:	perl-HTML-Tagset
