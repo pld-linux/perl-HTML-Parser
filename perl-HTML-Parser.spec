@@ -11,7 +11,6 @@ Group(pl):	Programowanie/Jêzyki/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/HTML-Parser-%{version}.tar.gz
 %requires_eq	perl
 Requires:	%{perl_sitearch}
-Obsoletes:	perl-MD5
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
