@@ -19,7 +19,7 @@ Summary(uk):	HTML::Parser - наб╕р модул╕в для розбору HTML-документ╕в
 Summary(zh_CN):	Perl ╣д HTML ╫БнЖфВдё©И║ё
 Name:		perl-HTML-Parser
 Version:	3.27
-Release:	2
+Release:	3
 License:	distributable
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -95,6 +95,7 @@ frЕn HTML-dokument.
 
 %build
 %{__perl} Makefile.PL \
+	INSTALLDIRS=vendor  \
 	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
