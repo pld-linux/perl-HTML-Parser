@@ -11,6 +11,8 @@ Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.cpan.org/pub/perl/CPAN/modules/by-module/HTML//HTML-Parser-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
+BuildRequires:	perl-HTML-Tagset
+Requires:	perl-libwww
 BuildConflicts:	perl-HTML-Stream = 1.45-3
 %requires_eq	perl
 Requires:	%{perl_sitearch}
