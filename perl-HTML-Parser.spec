@@ -65,7 +65,7 @@ HTML::Parser 모줄은 펄이 HTML 문서들로 부터 정보를 파싱하고 가져오게끔
 합니다.
 
 %description -l pl
-Modu� Perla HTML::Parser pozwalaj켧y na parsowanie i wyciaganie
+Modu� Perla HTML::Parser pozwalaj켧y na parsowanie i wyci켫anie
 informacji z dokumentu HTML.
 
 %description -l pt_BR
