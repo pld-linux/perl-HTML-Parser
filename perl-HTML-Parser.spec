@@ -4,11 +4,12 @@ Summary:	Perl HTML-Parser module
 Summary(pl):	Modu³ Perla HTML-Parser
 Name:		perl-HTML-Parser
 Version:	2.23
-Release:	0.1
+Release:	1
 Copyright:	distributable
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/HTML-Parser-%{version}.tar.gz
+BuildRequires:	perl >= 5.005_61
 %requires_eq	perl
 Requires:	%{perl_sitearch}
 BuildRoot:	/tmp/%{name}-%{version}-root
@@ -23,19 +24,15 @@ Modu³ perla pozwalaj±cy analizowaæ pliki HTML.
 %setup -q -n HTML-Parser-%{version}
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" perl Makefile.PL
-make
+perl Makefile.PL
+make OPTIMIZE="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/%{perl_sitearch} \
-	$RPM_BUILD_ROOT%{_mandir}/man3 \
-	$RPM_BUILD_ROOT/%{perl_archlib}
+install -d $RPM_BUILD_ROOT/%{perl_archlib}
 
-make \
-	PREFIX=$RPM_BUILD_ROOT%{_prefix} \
-	INSTALLMAN3DIR=$RPM_BUILD_ROOT%{_mandir}/man3 \
-	install
+make install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 (
   cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/HTML/Parser/
@@ -50,8 +47,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%dir %{perl_sitelib}/HTML
-%{perl_sitelib}/HTML/*.pm
+%{perl_sitelib}/HTML
 
 %{perl_sitearch}/auto/HTML
 
