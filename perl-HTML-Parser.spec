@@ -9,7 +9,6 @@ Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.cpan.org/pub/perl/CPAN/modules/by-module/HTML//HTML-Parser-%{version}.tar.gz
-Patch0: perl-HTML-Parser-rpmperl-automation-workaround.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
 BuildRequires:	perl-HTML-Tagset
@@ -17,6 +16,9 @@ BuildConflicts:	perl-HTML-Stream = 1.45-3
 %requires_eq	perl
 Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# HTTP::Headers (perl-libwww) is not always required
+%define		_noautoreq	"perl(HTTP::Headers)"
 
 %description
 Perl HTML-Parser module.
@@ -26,7 +28,6 @@ Modu³ perla pozwalaj±cy analizowaæ pliki HTML.
 
 %prep
 %setup -q -n HTML-Parser-%{version}
-%patch0 -p1
 
 %build
 perl Makefile.PL
