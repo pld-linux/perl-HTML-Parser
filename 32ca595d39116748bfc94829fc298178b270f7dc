@@ -1,0 +1,2 @@
+- added %%{perl_sitearch}/{,auto/}HTML dirs (no other package uses them)
+- release 2
