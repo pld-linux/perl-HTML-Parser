@@ -31,7 +31,7 @@ BuildConflicts:	perl-HTML-Stream = 1.45-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # HTTP::Headers (perl-libwww) is not always required
-%define		_noautoreq	"perl(HTTP::Headers)"
+%define		_noautoreq	'perl(HTTP::Headers)'
 
 %description
 Perl module HTML::Parser that allows to parse and extract information
@@ -99,7 +99,8 @@ från HTML-dokument.
 	INSTALLDIRS=vendor \
 	DEFINE="-DMARKED_SECTION -DUNICODE_ENTITIES" \
 	< /dev/null
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
