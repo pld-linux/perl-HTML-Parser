@@ -2,13 +2,13 @@
 Summary:	Perl HTML-Parser module
 Summary(pl):	Modu³ Perla HTML-Parser
 Name:		perl-HTML-Parser
-Version:	3.05
-Release:	5
+Version:	3.15
+Release:	1
 LIcense:	Distributable
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/HTML-Parser-%{version}.tar.gz
+Source0:	ftp://ftp.cpan.org/pub/perl/CPAN/modules/by-module/HTML//HTML-Parser-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
 BuildConflicts:	perl-HTML-Stream = 1.45-3
