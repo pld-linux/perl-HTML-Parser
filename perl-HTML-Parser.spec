@@ -13,7 +13,7 @@ Summary(ko):	фчю╩ ю╖гя HTML::Parser ╦Паы
 Summary(pl):	ModuЁ Perla HTML::Parser
 Summary(pt):	O mСdulo HTML::Parser para o Perl
 Summary(pt_BR):	MСdulo Perl HTML::Parser
-Summary(ru):	HTML::Parser - набор модулей для "разбора" HTML-документов.
+Summary(ru):	HTML::Parser - набор модулей для "разбора" HTML-документов
 Summary(sv):	HTML::Parser-modul till Perl
 Summary(uk):	HTML::Parser - наб╕р модул╕в для розбору HTML-документ╕в
 Summary(zh_CN):	Perl ╣д HTML ╫БнЖфВдё©И║ё
