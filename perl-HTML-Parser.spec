@@ -13,7 +13,7 @@ Summary(uk):	HTML::Parser - наб╕р модул╕в для розбору HTML-документ╕в
 Summary(zh_CN):	Perl ╣д HTML ╫БнЖфВдё©И║ё
 Name:		perl-HTML-Parser
 Version:	3.55
-Release:	0.1
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
