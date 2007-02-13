@@ -6,11 +6,11 @@
 %define		pdir	HTML
 %define		pnam	Parser
 Summary:	HTML::Parser - parsing and extracting information from HTML documents
-Summary(cs.UTF-8):   HTML::Parser - modul pro parsování HTML v Perlu
-Summary(pl.UTF-8):   HTML::Parser - analiza i wyciąganie informacji z dokumentów HTML
-Summary(ru.UTF-8):   HTML::Parser - набор модулей для "разбора" HTML-документов
-Summary(uk.UTF-8):   HTML::Parser - набір модулів для розбору HTML-документів
-Summary(zh_CN.UTF-8):   Perl 的 HTML 解析器模块。
+Summary(cs.UTF-8):	HTML::Parser - modul pro parsování HTML v Perlu
+Summary(pl.UTF-8):	HTML::Parser - analiza i wyciąganie informacji z dokumentów HTML
+Summary(ru.UTF-8):	HTML::Parser - набор модулей для "разбора" HTML-документов
+Summary(uk.UTF-8):	HTML::Parser - набір модулів для розбору HTML-документів
+Summary(zh_CN.UTF-8):	Perl 的 HTML 解析器模块。
 Name:		perl-HTML-Parser
 Version:	3.55
 Release:	1
