@@ -96,6 +96,7 @@ från HTML-dokument.
 	DEFINE="-DMARKED_SECTION -DUNICODE_ENTITIES" \
 	< /dev/null
 %{__make} \
+	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
 
 %{?with_tests:%{__make} test}
