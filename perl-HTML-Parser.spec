@@ -22,6 +22,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 URL:		http://search.cpan.org/dist/HTML-Parser/
 BuildRequires:	perl-HTML-Tagset >= 3
 BuildRequires:	perl-devel >= 1:5.8.0
+%{?with_tests:BuildRequires:	perl-libwww}
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildConflicts:	perl-HTML-Stream = 1.45-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
