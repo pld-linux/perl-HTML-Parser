@@ -17,7 +17,7 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/HTML/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/HTML/GAAS/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	cbc220e201b427bfcf231d95bee3c7ca
 URL:		http://search.cpan.org/dist/HTML-Parser/
 BuildRequires:	perl-HTML-Tagset >= 3
