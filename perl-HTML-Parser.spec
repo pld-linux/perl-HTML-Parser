@@ -12,13 +12,13 @@ Summary(ru.UTF-8):	HTML::Parser - набор модулей для "разбор
 Summary(uk.UTF-8):	HTML::Parser - набір модулів для розбору HTML-документів
 Summary(zh_CN.UTF-8):	Perl 的 HTML 解析器模块。
 Name:		perl-HTML-Parser
-Version:	3.65
-Release:	2
+Version:	3.68
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/HTML/GAAS/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	cbc220e201b427bfcf231d95bee3c7ca
+# Source0-md5:	5550b2da7aa94341f1e8a17a4ac20c68
 URL:		http://search.cpan.org/dist/HTML-Parser/
 BuildRequires:	perl-HTML-Tagset >= 3
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -59,12 +59,10 @@ Il modulo HTML::Parser per perl, che consente di analizzare documenti
 HTML e di estrarne informazioni.
 
 %description -l ja.UTF-8
-HTML ドキュメントから情報を解析、抽出するための Perl 用の HTML::Parser
-。
+HTML ドキュメントから情報を解析、抽出するための Perl 用の HTML::Parser 。
 
 %description -l ko.UTF-8
-HTML::Parser 모줄은 펄이 HTML 문서들로 부터 정보를 파싱하고 가져오게끔
-합니다.
+HTML::Parser 모줄은 펄이 HTML 문서들로 부터 정보를 파싱하고 가져오게끔 합니다.
 
 %description -l pl.UTF-8
 Moduł Perla HTML::Parser pozwalający na parsowanie i wyciąganie
