@@ -13,7 +13,7 @@ Summary(uk.UTF-8):	HTML::Parser - набір модулів для розбор�
 Summary(zh_CN.UTF-8):	Perl 的 HTML 解析器模块。
 Name:		perl-HTML-Parser
 Version:	3.68
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -113,7 +113,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README TODO
 %{perl_vendorarch}/HTML/*.pm
-%dir %{perl_vendorarch}/auto/HTML
 %dir %{perl_vendorarch}/auto/HTML/Parser
 %{perl_vendorarch}/auto/HTML/Parser/Parser.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/HTML/Parser/Parser.so
