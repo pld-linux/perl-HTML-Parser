@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests	# Do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	HTML
 %define		pnam	Parser
+%include	/usr/lib/rpm/macros.perl
 Summary:	HTML::Parser - parsing and extracting information from HTML documents
 Summary(cs.UTF-8):	HTML::Parser - modul pro parsování HTML v Perlu
 Summary(pl.UTF-8):	HTML::Parser - analiza i wyciąganie informacji z dokumentów HTML
@@ -13,7 +13,7 @@ Summary(uk.UTF-8):	HTML::Parser - набір модулів для розбор�
 Summary(zh_CN.UTF-8):	Perl 的 HTML 解析器模块。
 Name:		perl-HTML-Parser
 Version:	3.68
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -28,7 +28,7 @@ BuildConflicts:	perl-HTML-Stream = 1.45-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 # HTTP::Headers (perl-libwww) is not always required
-%define		_noautoreq	'perl(HTTP::Headers)'
+%define		_noautoreq	perl(HTTP::Headers)
 
 %description
 Perl module HTML::Parser that allows to parse and extract information
@@ -112,7 +112,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README TODO
-%dir %{perl_vendorarch}/HTML
 %{perl_vendorarch}/HTML/*.pm
 %dir %{perl_vendorarch}/auto/HTML
 %dir %{perl_vendorarch}/auto/HTML/Parser
