@@ -12,13 +12,13 @@ Summary(ru.UTF-8):	HTML::Parser - набор модулей для "разбор
 Summary(uk.UTF-8):	HTML::Parser - набір модулів для розбору HTML-документів
 Summary(zh_CN.UTF-8):	Perl 的 HTML 解析器模块。
 Name:		perl-HTML-Parser
-Version:	3.68
-Release:	3
+Version:	3.69
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/HTML/GAAS/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	5550b2da7aa94341f1e8a17a4ac20c68
+Source0:	http://www.cpan.org/modules/by-module/HTML/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	d22cc6468ce670a56034be907e4e7c54
 URL:		http://search.cpan.org/dist/HTML-Parser/
 BuildRequires:	perl-HTML-Tagset >= 3
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -112,8 +112,20 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README TODO
-%{perl_vendorarch}/HTML/*.pm
+%{perl_vendorarch}/HTML/Entities.pm
+%{perl_vendorarch}/HTML/Filter.pm
+%{perl_vendorarch}/HTML/HeadParser.pm
+%{perl_vendorarch}/HTML/LinkExtor.pm
+%{perl_vendorarch}/HTML/Parser.pm
+%{perl_vendorarch}/HTML/PullParser.pm
+%{perl_vendorarch}/HTML/TokeParser.pm
 %dir %{perl_vendorarch}/auto/HTML/Parser
 %{perl_vendorarch}/auto/HTML/Parser/Parser.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/HTML/Parser/Parser.so
-%{_mandir}/man3/HTML::*.3pm*
+%{_mandir}/man3/HTML::Entities.3pm*
+%{_mandir}/man3/HTML::Filter.3pm*
+%{_mandir}/man3/HTML::HeadParser.3pm*
+%{_mandir}/man3/HTML::LinkExtor.3pm*
+%{_mandir}/man3/HTML::Parser.3pm*
+%{_mandir}/man3/HTML::PullParser.3pm*
+%{_mandir}/man3/HTML::TokeParser.3pm*
