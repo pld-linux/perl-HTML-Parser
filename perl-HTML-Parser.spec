@@ -120,7 +120,6 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/HTML/PullParser.pm
 %{perl_vendorarch}/HTML/TokeParser.pm
 %dir %{perl_vendorarch}/auto/HTML/Parser
-%{perl_vendorarch}/auto/HTML/Parser/Parser.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/HTML/Parser/Parser.so
 %{_mandir}/man3/HTML::Entities.3pm*
 %{_mandir}/man3/HTML::Filter.3pm*
