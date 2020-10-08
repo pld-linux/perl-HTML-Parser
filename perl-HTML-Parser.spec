@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	tests	# Do not perform "make test"
+%bcond_without	tests	# unit tests
 
 %define		pdir	HTML
 %define		pnam	Parser
@@ -18,11 +18,17 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	https://www.cpan.org/modules/by-module/HTML/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	65bf65aa8b34b35443e094010f991406
-URL:		https://search.cpan.org/dist/HTML-Parser/
+URL:		https://metacpan.org/release/HTML-Tagset
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.52
 BuildRequires:	perl-HTML-Tagset >= 3
 BuildRequires:	perl-devel >= 1:5.8.0
-%{?with_tests:BuildRequires:	perl-libwww}
+%if %{with tests}
+BuildRequires:	perl-Test-Simple
+BuildRequires:	perl-URI
+BuildRequires:	perl-libwww
+%endif
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 BuildConflicts:	perl-HTML-Stream = 1.45-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -110,7 +116,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README TODO
+%doc Changes TODO
 %{perl_vendorarch}/HTML/Entities.pm
 %{perl_vendorarch}/HTML/Filter.pm
 %{perl_vendorarch}/HTML/HeadParser.pm
