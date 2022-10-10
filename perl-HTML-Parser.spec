@@ -18,7 +18,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	https://www.cpan.org/modules/by-module/HTML/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	6d7c1ca50623cd2b398d1898e48f1ea6
-URL:		https://metacpan.org/release/HTML-Tagset
+URL:		https://metacpan.org/release/HTML-Parser
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.52
 BuildRequires:	perl-HTML-Tagset >= 3
 BuildRequires:	perl-devel >= 1:5.8.0
