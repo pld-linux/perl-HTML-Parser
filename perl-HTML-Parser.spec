@@ -11,13 +11,13 @@ Summary(ru.UTF-8):	HTML::Parser - набор модулей для "разбор
 Summary(uk.UTF-8):	HTML::Parser - набір модулів для розбору HTML-документів
 Summary(zh_CN.UTF-8):	Perl 的 HTML 解析器模块。
 Name:		perl-HTML-Parser
-Version:	3.83
+Version:	3.85
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	https://www.cpan.org/modules/by-module/HTML/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	17a4c886024bfad1cffcbe6b46cda128
+# Source0-md5:	400384681da1452493d36f036d9f387b
 URL:		https://metacpan.org/dist/HTML-Parser
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.52
 BuildRequires:	perl-HTML-Tagset >= 3
