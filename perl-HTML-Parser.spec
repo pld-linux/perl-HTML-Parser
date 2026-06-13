@@ -16,7 +16,7 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	https://www.cpan.org/modules/by-module/HTML/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-module/HTML/OALDERS/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	400384681da1452493d36f036d9f387b
 URL:		https://metacpan.org/dist/HTML-Parser
 BuildRequires:	perl-ExtUtils-MakeMaker >= 6.52
@@ -24,15 +24,15 @@ BuildRequires:	perl-HTML-Tagset >= 3
 BuildRequires:	perl-devel >= 1:5.8.0
 %if %{with tests}
 BuildRequires:	perl-Test-Simple
+BuildRequires:	perl-HTTP-Message
 BuildRequires:	perl-URI
-BuildRequires:	perl-libwww
 %endif
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
 BuildConflicts:	perl-HTML-Stream = 1.45-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-# HTTP::Headers (perl-libwww) is not always required
+# HTTP::Headers (perl-HTTP-Message) is not always required
 %define		_noautoreq	perl(HTTP::Headers)
 
 %description
@@ -99,11 +99,14 @@ från HTML-dokument.
 	INSTALLDIRS=vendor \
 	DEFINE="-DMARKED_SECTION -DUNICODE_ENTITIES" \
 	< /dev/null
+
 %{__make} \
 	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
 
-%{?with_tests:%{__make} test}
+%if %{with tests}
+%{__make} test
+%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -125,7 +128,7 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/HTML/PullParser.pm
 %{perl_vendorarch}/HTML/TokeParser.pm
 %dir %{perl_vendorarch}/auto/HTML/Parser
-%attr(755,root,root) %{perl_vendorarch}/auto/HTML/Parser/Parser.so
+%{perl_vendorarch}/auto/HTML/Parser/Parser.so
 %{_mandir}/man3/HTML::Entities.3pm*
 %{_mandir}/man3/HTML::Filter.3pm*
 %{_mandir}/man3/HTML::HeadParser.3pm*
