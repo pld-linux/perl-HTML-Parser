@@ -12,7 +12,7 @@ Summary(uk.UTF-8):	HTML::Parser - набір модулів для розбор�
 Summary(zh_CN.UTF-8):	Perl 的 HTML 解析器模块。
 Name:		perl-HTML-Parser
 Version:	3.85
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
